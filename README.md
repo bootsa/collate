@@ -17,22 +17,22 @@ May produce as a Django add on.
 
 Basic breakdown:
 * produce url and selector list
-** embedded dictionary list (href, selectortype, selectorname)
-** editable
-** jquery highlighting selector selection?
+  * embedded dictionary list (href, selectortype, selectorname)
+  * editable
+  * jquery highlighting selector selection?
 * generate unique tokens from URLs for internal anchors/links, append to list
 * retrieve each content
-** append token to selector ID (remove styling?)
-** add title and anchor link (within selector)
-** append to cumulative store
+  * append token to selector ID (remove styling?)
+  * add title and anchor link (within selector)
+  * append to cumulative store
 * process cumulative store
-** replace links with anchor names
+  * replace links with anchor names
 * generate table of contents
 * build collated page
-** html header
-** table of contents
-** cumulative content
-** html close
+  * html header
+  * table of contents
+  * cumulative content
+  * html close
 * turn into ebook?
-** process with calibre?
+  * process with calibre?
 
