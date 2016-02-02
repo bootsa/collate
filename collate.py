@@ -44,15 +44,16 @@ import bs4
 
 # a list of URLs to iterate through and combine in order
 resources = [
-	{'href':'http://www.resourcecentre.org.uk/information-category/starting-a-group/', 'selectortype':'div', 'selectorname':'content'},
-	{'href':'http://www.resourcecentre.org.uk/information-category/starting-a-group/first-steps-for-new-groups/', 'selectortype':'div', 'selectorname':'content'}
+	{'href':'http://localhost/testpage1.html', 'selectortype':'div', 'selectorname':'content'},
+	{'href':'http://localhost/testpage2.html', 'selectortype':'div', 'selectorname':'content'}
 	]
 
 def getContents(res):
 		response = requests.get(res['href'])
 		pagename = res['href'].split('/')[-3:-1]
 		soup = bs4.BeautifulSoup(response.text, "lxml")
-		result = soup.select('div#' + res['div'])
+
+		result = soup.select(res['selectortype'] + '#' + res['selectorname'])
 		
 		return result
 
